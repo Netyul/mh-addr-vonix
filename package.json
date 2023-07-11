@@ -1,0 +1,26 @@
+{
+  "name": "mh-addr-vonix",
+  "version": "1.0.0",
+  "description": "systema para geração de relatorio de agentes logados do vonix",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:server": "cd api && npm run dev",
+    "dev:client": "cd frontent && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Netyul/mh-addr-vonix.git"
+  },
+  "keywords": [
+    "vonix",
+    "relatorios",
+    "agentes"
+  ],
+  "author": "JefteCosta <jefteamorim@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Netyul/mh-addr-vonix/issues"
+  },
+  "homepage": "https://github.com/Netyul/mh-addr-vonix#readme"
+}

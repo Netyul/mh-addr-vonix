@@ -1,0 +1,74 @@
+{
+  "name": "w-api",
+  "version": "3.20.25",
+  "description": "sistema backend da wsuite",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version",
+    "commit": "git add . && cz",
+    "prepare": "husky install"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src/storage/*"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "git cz"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/W-Techn/wsuite-api.git"
+  },
+  "author": "JefteCosta <jefteamorim@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/W-Techn/wsuite-api/issues"
+  },
+  "homepage": "https://github.com/W-Techn/wsuite-api#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.12",
+    "standard-version": "^9.3.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.171.0",
+    "aws-sdk": "^2.1222.0",
+    "bcrypt-node": "^0.1.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "git-cz": "^4.9.0",
+    "jwt-simple": "^0.5.6",
+    "knex": "^0.95.11",
+    "moment": "^2.29.3",
+    "moment-range": "^4.0.2",
+    "multer": "^1.4.3",
+    "multer-s3": "^2.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
+    "node-schedule": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "pm2": "^5.1.1",
+    "request-ip": "^3.3.0"
+  }
+}
