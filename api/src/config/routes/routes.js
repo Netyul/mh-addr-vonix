@@ -9,10 +9,10 @@ module.exports = (app) => {
   app.post('/v2/login', controllers.auth.login);
   // 👉 Middleware de autenticação:
   
-  app.u
+  
   // 👉 Rotas de atendimento humano
 
-  routerAttendance.route('/agents_reports').get(controllers.agent.agentsReports);
+  app.route('/v2/agents_reports').get(controllers.agent.agentsReports);
 
   
 

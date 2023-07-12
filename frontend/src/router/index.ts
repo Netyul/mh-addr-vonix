@@ -33,6 +33,10 @@ const router = createRouter({
           component: () => import('../pages/tables.vue'),
         },
         {
+          path: 'faturamento',
+          component: () => import('../pages/faturamento.vue'),
+        },
+        {
           path: 'form-layouts',
           component: () => import('../pages/form-layouts.vue'),
         },
@@ -42,6 +46,7 @@ const router = createRouter({
       path: '/',
       component: () => import('../layouts/blank.vue'),
       children: [
+
         {
           path: 'login',
           component: () => import('../pages/login.vue'),

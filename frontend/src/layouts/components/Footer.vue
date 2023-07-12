@@ -16,7 +16,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="text-primary ms-1"
-      >ThemeSelection</a>
+      >JC</a>
     </span>
     <!-- 👉 Footer: right content -->
     <span class="d-md-flex gap-x-4 text-primary d-none">
@@ -25,11 +25,11 @@
         target="noopener noreferrer"
       >License</a>
       <a
-        href="https://themeselection.com/"
+        href="https://midiahub.com.br/"
         target="noopener noreferrer"
       >More Themes</a>
       <a
-        href="https://demos.themeselection.com/sneat-vuetify-vuejs-admin-template/documentation/"
+        href="https://midiahub.com.br/contato"
         target="noopener noreferrer"
       >Documentation</a>
     </span>

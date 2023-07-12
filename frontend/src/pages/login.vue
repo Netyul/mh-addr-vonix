@@ -11,10 +11,11 @@ const form = ref({
 const authStore = useAuthStore()
 const isPasswordVisible = ref(false)
 
-const login = async (form) => {
+const login = async form => {
   const rt = await authStore.login(form.username, form.password)
-  console.log(rt) 
-  //$router.push('/')"
+
+  console.log(rt)
+  $router.push('/')
 }
 </script>
 
@@ -98,35 +99,37 @@ const login = async (form) => {
             </VCol>
 
             <!-- create account -->
-            <!-- <VCol
+            <!--
+              <VCol
               cols="12"
               class="text-center text-base"
-            >
+              >
               <span>New on our platform?</span>
               <RouterLink
-                class="text-primary ms-2"
-                to="/register"
+              class="text-primary ms-2"
+              to="/register"
               >
-                Create an account
+              Create an account
               </RouterLink>
-            </VCol>
+              </VCol>
 
-            <VCol
+              <VCol
               cols="12"
               class="d-flex align-center"
-            >
+              >
               <VDivider />
               <span class="mx-4">or</span>
               <VDivider />
-            </VCol>
+              </VCol>
 
-             auth providers 
-            <VCol
+              auth providers
+              <VCol
               cols="12"
               class="text-center"
-            >
+              >
               <AuthProvider />
-            </VCol> -->
+              </VCol>
+            -->
           </VRow>
         </VForm>
       </VCardText>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import avatar1 from '@images/avatars/avatar-1.png'
+import avatar1 from '@images/avatars/avatar-16.png'
 </script>
 
 <template>
@@ -54,44 +54,46 @@ import avatar1 from '@images/avatars/avatar-1.png'
           </VListItem>
           <VDivider class="my-2" />
 
-          <!-- 👉 Profile -->
-          <VListItem link>
+          <!--
+            👉 Profile
+            <VListItem link>
             <template #prepend>
-              <VIcon
-                class="me-2"
-                icon="bx-user"
-                size="22"
-              />
+            <VIcon
+            class="me-2"
+            icon="bx-user"
+            size="22"
+            />
             </template>
 
             <VListItemTitle>Profile</VListItemTitle>
-          </VListItem>
+            </VListItem>
 
-          <!-- 👉 Settings -->
-          <VListItem link>
+            👉 Settings
+            <VListItem link>
             <template #prepend>
-              <VIcon
-                class="me-2"
-                icon="bx-cog"
-                size="22"
-              />
+            <VIcon
+            class="me-2"
+            icon="bx-cog"
+            size="22"
+            />
             </template>
 
             <VListItemTitle>Settings</VListItemTitle>
-          </VListItem>
+            </VListItem>
 
-          <!-- 👉 Pricing -->
-          <VListItem link>
+            👉 Pricing
+            <VListItem link>
             <template #prepend>
-              <VIcon
-                class="me-2"
-                icon="bx-dollar"
-                size="22"
-              />
+            <VIcon
+            class="me-2"
+            icon="bx-dollar"
+            size="22"
+            />
             </template>
 
             <VListItemTitle>Pricing</VListItemTitle>
-          </VListItem>
+            </VListItem>
+          -->
 
           <!-- 👉 FAQ -->
           <VListItem link>
@@ -105,7 +107,17 @@ import avatar1 from '@images/avatars/avatar-1.png'
 
             <VListItemTitle>FAQ</VListItemTitle>
           </VListItem>
+          <VListItem to="/login">
+            <template #prepend>
+              <VIcon
+                class="me-2"
+                icon="bx-award"
+                size="22"
+              />
+            </template>
 
+            <VListItemTitle>License</VListItemTitle>
+          </VListItem>
           <!-- Divider -->
           <VDivider class="my-2" />
 

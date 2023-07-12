@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { useTheme } from 'vuetify'
 
-import VerticalNavSectionTitle from '@/@layouts/components/VerticalNavSectionTitle.vue'
 import upgradeBannerDark from '@images/pro/upgrade-banner-dark.png'
 import upgradeBannerLight from '@images/pro/upgrade-banner-light.png'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
+import VerticalNavSectionTitle from '@/@layouts/components/VerticalNavSectionTitle.vue'
 
 // Components
 import Footer from '@/layouts/components/Footer.vue'
@@ -79,102 +79,122 @@ const upgradeBanner = computed(() => {
           to: '/dashboard',
         }"
       />
-      <VerticalNavLink
+      <!--
+        <VerticalNavLink
         :item="{
-          title: 'Account Settings',
-          icon: 'mdi-account-cog-outline',
-          to: '/account-settings',
+        title: 'Account Settings',
+        icon: 'mdi-account-cog-outline',
+        to: '/account-settings',
         }"
-      />
-
+        />
+      -->
       <!-- 👉 Pages -->
       <VerticalNavSectionTitle
+
         :item="{
-          heading: 'Pages',
+          heading: 'Relatório',
         }"
       />
       <VerticalNavLink
         :item="{
-          title: 'Login',
+          title: 'Faturamneto',
+          icon: 'mdi-form-select',
+          to: '/faturamento',
+        }"
+      />
+      <VerticalNavSectionTitle
+
+        :item="{
+          heading: 'Mais',
+        }"
+      />
+      <VerticalNavLink
+        :item="{
+          title: 'Logout',
           icon: 'bx-log-in',
           to: '/login',
         }"
       />
-      <VerticalNavLink
+      <!--
+        <VerticalNavLink
         :item="{
-          title: 'Register',
-          icon: 'bx-user-plus',
-          to: '/register',
+        title: 'Register',
+        icon: 'bx-user-plus',
+        to: '/register',
         }"
-      />
-      <VerticalNavLink
+        />
+        <VerticalNavLink
         :item="{
-          title: 'Error',
-          icon: 'bx-info-circle',
-          to: '/no-existence',
+        title: 'Error',
+        icon: 'bx-info-circle',
+        to: '/no-existence',
         }"
-      />
-
-      <!-- 👉 User Interface -->
-      <VerticalNavSectionTitle
+        />
+      -->
+      <!--
+        👉 User Interface
+        <VerticalNavSectionTitle
         :item="{
-          heading: 'User Interface',
+        heading: 'User Interface',
         }"
-      />
-      <VerticalNavLink
+        />
+        <VerticalNavLink
         :item="{
-          title: 'Typography',
-          icon: 'mdi-alpha-t-box-outline',
-          to: '/typography',
+        title: 'Typography',
+        icon: 'mdi-alpha-t-box-outline',
+        to: '/typography',
         }"
-      />
-      <VerticalNavLink
+        />
+        <VerticalNavLink
         :item="{
-          title: 'Icons',
-          icon: 'bx-show',
-          to: '/icons',
+        title: 'Icons',
+        icon: 'bx-show',
+        to: '/icons',
         }"
-      />
-      <VerticalNavLink
+        />
+        <VerticalNavLink
         :item="{
-          title: 'Cards',
-          icon: 'bx-credit-card',
-          to: '/cards',
+        title: 'Cards',
+        icon: 'bx-credit-card',
+        to: '/cards',
         }"
-      />
-      <VerticalNavLink
+        />
+        <VerticalNavLink
         :item="{
-          title: 'Tables',
-          icon: 'bx-table',
-          to: '/tables',
+        title: 'Tables',
+        icon: 'bx-table',
+        to: '/tables',
         }"
-      />
-      <VerticalNavLink
+        />
+        <VerticalNavLink
         :item="{
-          title: 'Form Layouts',
-          icon: 'mdi-form-select',
-          to: '/form-layouts',
+        title: 'Form Layouts',
+        icon: 'mdi-form-select',
+        to: '/form-layouts',
         }"
-      />
+        />
+      -->
     </template>
 
-    <template #after-vertical-nav-items>
-      <!-- 👉 illustration -->
+    <!--
+      <template #after-vertical-nav-items>
+      👉 illustration
       <a
-        href="https://themeselection.com/item/sneat-vuetify-vuejs-admin-template"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="margin-left: 7px;"
+      href="https://themeselection.com/item/sneat-vuetify-vuejs-admin-template"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="margin-left: 7px;"
       >
-        <img
-          :src="upgradeBanner"
-          alt="upgrade-banner"
-          transition="scale-transition"
-          class="upgrade-banner mx-auto"
-          style="max-width: 230px;"
-        >
+      <img
+      :src="upgradeBanner"
+      alt="upgrade-banner"
+      transition="scale-transition"
+      class="upgrade-banner mx-auto"
+      style="max-width: 230px;"
+      >
       </a>
-    </template>
+      </template>
+    -->
 
     <!-- 👉 Pages -->
     <slot />
