@@ -5,12 +5,29 @@ import upgradeBannerDark from '@images/pro/upgrade-banner-dark.png'
 import upgradeBannerLight from '@images/pro/upgrade-banner-light.png'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
+import useAuthStore from '../../stores/auth'
 import VerticalNavSectionTitle from '@/@layouts/components/VerticalNavSectionTitle.vue'
 
 // Components
 import Footer from '@/layouts/components/Footer.vue'
 import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
+
+const authStore = useAuthStore()
+interface SairParams {
+  count_login: number
+  created_at: string
+  id: number
+  last_login: string
+  password: string
+  status: number
+  type_admin: string
+  updated_at: string
+  user: number
+  username: string
+  uuid: string
+}
+type Sair = (params: SairParams) => void
 
 // Banner
 
@@ -19,6 +36,12 @@ const vuetifyTheme = useTheme()
 const upgradeBanner = computed(() => {
   return vuetifyTheme.global.name.value === 'light' ? upgradeBannerLight : upgradeBannerDark
 })
+
+// console.log('auth nav status ', authStore.authStatus)
+
+const logout: Sair = async (params: SairParams) => {
+  await authStore.logout(params)
+}
 </script>
 
 <template>
@@ -52,14 +75,14 @@ const upgradeBanner = computed(() => {
 
         <VSpacer />
 
-        <IconBtn
+        <!-- <IconBtn
           class="me-2"
           href="https://github.com/themeselection/sneat-vuetify-vuejs-admin-template-free"
           target="_blank"
           rel="noopener noreferrer"
         >
           <VIcon icon="bxl-github" />
-        </IconBtn>
+        </IconBtn> -->
 
         <IconBtn class="me-2">
           <VIcon icon="bx-bell" />
@@ -92,14 +115,21 @@ const upgradeBanner = computed(() => {
       <VerticalNavSectionTitle
 
         :item="{
-          heading: 'Relatório',
+          heading: 'Relatório de Faturamento',
         }"
       />
       <VerticalNavLink
         :item="{
-          title: 'Faturamneto',
+          title: 'Faturamento Sintético',
           icon: 'mdi-form-select',
           to: '/faturamento',
+        }"
+      />
+      <VerticalNavLink
+        :item="{
+          title: 'Faturamento Analitico',
+          icon: 'mdi-form-select',
+          to: '/faturamento-analitico',
         }"
       />
       <VerticalNavSectionTitle
@@ -114,6 +144,7 @@ const upgradeBanner = computed(() => {
           icon: 'bx-log-in',
           to: '/login',
         }"
+        @click="logout(authStore.authStatus)"
       />
       <!--
         <VerticalNavLink

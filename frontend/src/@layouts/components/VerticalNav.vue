@@ -2,7 +2,7 @@
 import type { Component } from 'vue'
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 import { useDisplay } from 'vuetify'
-import logo from '@images/logofulltime.png'
+import logo from '@images/logotipo-vonix.png'
 
 interface Props {
   tag?: string | Component
@@ -65,17 +65,15 @@ const handleNavScroll = (evt: Event) => {
             >
           -->
           <VImg
-            :width="146"
-            aspect-ratio="16/9"
+            :width="60"
+            aspect-ratio="4/3"
             cover
             :src="logo"
             class="leading-normal"
           />
-          <!--
-            <h1 class="leading-normal">
-            sneat
-            </h1>
-          -->
+          <h1 class="leading-normal">
+            Vonix
+          </h1>
         </RouterLink>
       </slot>
     </div>

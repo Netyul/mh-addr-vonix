@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Netyul/mh-addr-vonix/issues"
   },
-  "homepage": "https://github.com/Netyul/mh-addr-vonix#readme"
+  "homepage": "https://github.com/Netyul/mh-addr-vonix#readme",
+  "dependencies": {
+    
+  }
 }

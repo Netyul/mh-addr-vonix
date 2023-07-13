@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import useAuthStore from '../stores/auth'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -64,4 +65,18 @@ const router = createRouter({
   ],
 })
 
+router.beforeEach(async (to, from) => {
+  const authStore = useAuthStore()
+
+  console.log('status ', authStore.apiStatus)
+  if (
+    // make sure the user is authenticated
+    !authStore.apikey && to.path !== '/login'
+  ) {
+    console.log(to)
+
+    // redirect the user to the login page
+    return { path: '/login' }
+  }
+})
 export default router

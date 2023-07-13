@@ -48,9 +48,9 @@ import avatar1 from '@images/avatars/avatar-16.png'
             </template>
 
             <VListItemTitle class="font-weight-semibold">
-              John Doe
+              Sem Parar
             </VListItemTitle>
-            <VListItemSubtitle>Admin</VListItemSubtitle>
+            <VListItemSubtitle>Usuario Simples</VListItemSubtitle>
           </VListItem>
           <VDivider class="my-2" />
 

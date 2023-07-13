@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import logo from '@images/logo.svg?raw'
-import { useAuthStore } from '@/stores/auth'
+import logo from '@images/logotipo-vonix.png'
+import useAuthStore from '@/stores/auth'
+
+const router = useRouter()
 
 const form = ref({
   username: '',
@@ -10,13 +12,24 @@ const form = ref({
 
 const authStore = useAuthStore()
 const isPasswordVisible = ref(false)
+const keyValues = ref(localStorage.getItem('apikey'))
 
-const login = async form => {
+const login = async ( form ) => {
   const rt = await authStore.login(form.username, form.password)
-
-  console.log(rt)
-  $router.push('/')
 }
+
+console.log('apikey k', keyValues.value)
+if (keyValues.value) {
+// verifica se existe apikey
+  router.push('/')
+}
+watch(keyValues, () => {
+  if (keyValues.value) {
+    console.log('apikey w', apikey)
+    router.push('/')
+  }
+})
+
 </script>
 
 <template>
@@ -28,23 +41,22 @@ const login = async form => {
       <VCardItem class="justify-center">
         <template #prepend>
           <div class="d-flex">
-            <div
+            <VImg
               class="d-flex text-primary"
-              v-html="logo"
+              :src="logo"
             />
           </div>
         </template>
-
         <VCardTitle class="text-2xl font-weight-bold">
           Vonix
         </VCardTitle>
       </VCardItem>
 
-      <VCardText class="pt-2">
-        <h5 class="text-h5 mb-1">
-          Bem Vindo ao Vonix! 👋🏻
+      <VCardText class="pt-2 ">
+        <h5 class="text-h5 mb-1 text-center">
+          Bem Vindo! 👋🏻
         </h5>
-        <p class="mb-0">
+        <p class="mb-0 text-center">
           Por favor, entre na sua conta e comece a aventura
         </p>
       </VCardText>

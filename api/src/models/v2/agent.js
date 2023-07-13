@@ -3,10 +3,10 @@ module.exports = (app) => {
   return {
     findBy: async (params) => {
       const qs = params
-      const dataInit = qs.dataInit
-      const dataEnd = qs.dataEnd
-      delete qs.dataInit
-      delete qs.dataEnd
+      const dataInit = qs.start
+      const dataEnd = qs.end
+      delete qs.start
+      delete qs.end
       return await app.db.select('*').from('agents_reports').whereBetween('date_login',[dataInit, dataEnd]).where(qs).orderBy('date_login', 'desc')
     }
   }
