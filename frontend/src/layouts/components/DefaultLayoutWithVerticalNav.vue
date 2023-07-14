@@ -75,14 +75,16 @@ const logout: Sair = async (params: SairParams) => {
 
         <VSpacer />
 
-        <!-- <IconBtn
+        <!--
+          <IconBtn
           class="me-2"
           href="https://github.com/themeselection/sneat-vuetify-vuejs-admin-template-free"
           target="_blank"
           rel="noopener noreferrer"
-        >
+          >
           <VIcon icon="bxl-github" />
-        </IconBtn> -->
+          </IconBtn>
+        -->
 
         <IconBtn class="me-2">
           <VIcon icon="bx-bell" />
@@ -95,13 +97,15 @@ const logout: Sair = async (params: SairParams) => {
     </template>
 
     <template #vertical-nav-content>
-      <VerticalNavLink
+      <!--
+        <VerticalNavLink
         :item="{
-          title: 'Dashboard',
-          icon: 'bx-home',
-          to: '/dashboard',
+        title: 'Dashboard',
+        icon: 'bx-home',
+        to: '/dashboard',
         }"
-      />
+        />
+      -->
       <!--
         <VerticalNavLink
         :item="{
@@ -125,13 +129,15 @@ const logout: Sair = async (params: SairParams) => {
           to: '/faturamento',
         }"
       />
-      <VerticalNavLink
+      <!--
+        <VerticalNavLink
         :item="{
-          title: 'Faturamento Analitico',
-          icon: 'mdi-form-select',
-          to: '/faturamento-analitico',
+        title: 'Faturamento Analitico',
+        icon: 'mdi-form-select',
+        to: '/faturamento-analitico',
         }"
-      />
+        />
+      -->
       <VerticalNavSectionTitle
 
         :item="{
